@@ -72,6 +72,7 @@ async function WelcomeDetails({ lang }: { lang: "en" | "de" | "fr" }) {
 
         <section className="mt-8 text-[15px] leading-6">
           <p className="font-semibold">{t.welcome.rules.parties}</p>
+          <p className="mt-2 font-semibold">{t.welcome.rules.smoking}</p>
           <p className="mt-2 text-muted">{t.welcome.rules.neighbours}</p>
           <p className="mt-3">
             {fill(t.welcome.rules.loss, {

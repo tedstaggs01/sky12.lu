@@ -196,6 +196,7 @@ export const fr: Messages = {
     parking: "Nous ne fournissons pas de place de parking. Garez-vous à {auchan} et utilisez la carte de parking pour sortir.",
     rules: {
       parties: "Strictement aucune fête, et aucune nuisance sonore. Lisez ceci attentivement.",
+      smoking: "Il est strictement interdit de fumer à l'intérieur.",
       neighbours: "Nous aimons nos voyageurs, et nous aimons aussi nos voisins et nos logements.",
       loss: "Une clé ou une carte de parking perdue est facturée {amount}.",
     },

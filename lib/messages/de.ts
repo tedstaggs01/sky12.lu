@@ -196,6 +196,7 @@ export const de: Messages = {
     parking: "Einen Parkplatz stellen wir nicht. Parken Sie bei {auchan} und nutzen Sie die Parkkarte für die Ausfahrt.",
     rules: {
       parties: "Strikt keine Partys und keine Lärmbelästigung. Bitte lesen Sie das aufmerksam.",
+      smoking: "Strikt kein Rauchen im Inneren.",
       neighbours: "Wir mögen unsere Gäste, und wir mögen unsere Nachbarn und unsere Wohnungen ebenso.",
       loss: "Ein verlorener Schlüssel oder eine verlorene Parkkarte wird mit {amount} berechnet.",
     },

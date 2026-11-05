@@ -194,6 +194,7 @@ export const en = {
     parking: "We do not provide a parking space. Park at {auchan}, and use the parking card to exit.",
     rules: {
       parties: "Strictly no parties, and no noise abuse. Please read this carefully.",
+      smoking: "Strictly no smoking inside.",
       neighbours: "We love our guests, and we love our neighbours and our properties too.",
       loss: "A lost key or parking pass is charged at {amount}.",
     },
