@@ -341,8 +341,8 @@ export const en = {
       "T1-12-05",
       "12th floor",
       "Above the {shopping}",
-      "Rue Albert Einstein",
-      "Gasperich, Luxembourg",
+      "21, Boulevard F.W. Raiffeisen",
+      "L-2411 Luxembourg",
     ],
   },
 };

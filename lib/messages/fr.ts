@@ -343,8 +343,8 @@ export const fr: Messages = {
       "T1-12-05",
       "12e étage",
       "Au-dessus du {shopping}",
-      "Rue Albert Einstein",
-      "Gasperich, Luxembourg",
+      "21, Boulevard F.W. Raiffeisen",
+      "L-2411 Luxembourg",
     ],
   },
 };

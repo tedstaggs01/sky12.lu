@@ -21,7 +21,7 @@ export const stay = {
     "T1-12-05",
     "12th floor",
     "Above the Cloche d'Or shopping centre",
-    "Rue Albert Einstein",
-    "Gasperich, Luxembourg",
+    "21, Boulevard F.W. Raiffeisen",
+    "L-2411 Luxembourg",
   ],
 };
