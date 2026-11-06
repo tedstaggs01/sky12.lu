@@ -191,7 +191,18 @@ export const en = {
     savePdf: "Save as PDF",
     savePdfHint: "Keep this guide for when you have no wifi.",
     guidesSoon: "The directions will be here.",
-    parking: "We do not provide a parking space. Park at {auchan}, and use the parking card to exit.",
+    parking:
+      "We do not provide a parking space. Park at {auchan}, and use the parking card to exit. Send your number plate to {email} at least {hours} before you arrive, so it can be registered.",
+    parkingHours: "48 hours",
+    arrivalFacts: {
+      guestsLabel: "Guests",
+      guests: "Maximum 2",
+      checkIn: "Check-in",
+      checkInTime: "15:00",
+      checkOut: "Check-out",
+      checkOutTime: "11:00",
+      id: "Each guest sends a copy of their ID to {email}.",
+    },
     rules: {
       parties: "Strictly no parties, and no noise abuse. Please read this carefully.",
       smoking: "Strictly no smoking inside.",

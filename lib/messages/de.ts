@@ -193,7 +193,18 @@ export const de: Messages = {
     savePdf: "Als PDF speichern",
     savePdfHint: "Für die Zeit ohne WLAN.",
     guidesSoon: "Die Wegbeschreibung folgt hier.",
-    parking: "Einen Parkplatz stellen wir nicht. Parken Sie bei {auchan} und nutzen Sie die Parkkarte für die Ausfahrt.",
+    parking:
+      "Einen Parkplatz stellen wir nicht. Parken Sie bei {auchan} und nutzen Sie die Parkkarte für die Ausfahrt. Schicken Sie Ihr Kennzeichen mindestens {hours} vor der Anreise an {email}, damit wir es anmelden können.",
+    parkingHours: "48 Stunden",
+    arrivalFacts: {
+      guestsLabel: "Gäste",
+      guests: "Höchstens 2",
+      checkIn: "Anreise",
+      checkInTime: "15:00",
+      checkOut: "Abreise",
+      checkOutTime: "11:00",
+      id: "Jeder Gast schickt eine Ausweiskopie an {email}.",
+    },
     rules: {
       parties: "Strikt keine Partys und keine Lärmbelästigung. Bitte lesen Sie das aufmerksam.",
       smoking: "Strikt kein Rauchen im Inneren.",

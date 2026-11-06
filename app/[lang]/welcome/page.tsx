@@ -81,7 +81,33 @@ async function WelcomeDetails({ lang }: { lang: "en" | "de" | "fr" }) {
           </p>
         </section>
 
-        <p className="mt-8 rounded-2xl border border-line px-5 py-4 text-[15px] leading-6">
+        <section className="mt-8">
+          <dl className="grid grid-cols-3 gap-4 text-[15px] leading-6">
+            <div>
+              <dt className="text-muted">{t.welcome.arrivalFacts.guestsLabel}</dt>
+              <dd className="font-semibold">{t.welcome.arrivalFacts.guests}</dd>
+            </div>
+            <div>
+              <dt className="text-muted">{t.welcome.arrivalFacts.checkIn}</dt>
+              <dd className="font-semibold">{t.welcome.arrivalFacts.checkInTime}</dd>
+            </div>
+            <div>
+              <dt className="text-muted">{t.welcome.arrivalFacts.checkOut}</dt>
+              <dd className="font-semibold">{t.welcome.arrivalFacts.checkOutTime}</dd>
+            </div>
+          </dl>
+          <p className="mt-4 text-[15px] leading-6">
+            {fill(t.welcome.arrivalFacts.id, {
+              email: (
+                <a href={`mailto:${email}`} className="font-medium underline">
+                  {email}
+                </a>
+              ),
+            })}
+          </p>
+        </section>
+
+        <p className="mt-4 rounded-2xl border border-line px-5 py-4 text-[15px] leading-6">
           {fill(t.welcome.parking, {
             auchan: (
               <span className="inline-flex items-center gap-1 font-medium">
@@ -99,6 +125,12 @@ async function WelcomeDetails({ lang }: { lang: "en" | "de" | "fr" }) {
                 Auchan
               </span>
             ),
+            email: (
+              <a href={`mailto:${email}`} className="font-medium underline">
+                {email}
+              </a>
+            ),
+            hours: <span className="font-semibold">{t.welcome.parkingHours}</span>,
           })}
         </p>
 
