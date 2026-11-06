@@ -191,6 +191,7 @@ export const en = {
     savePdf: "Save as PDF",
     savePdfHint: "Keep this guide for when you have no wifi.",
     guidesSoon: "The directions will be here.",
+    offline: "Download the guides as PDF in advance if you will not have an internet connection in Luxembourg.",
     parking:
       "We do not provide a parking space. Park at {auchan}, and use the parking card to exit. Send your number plate to {email} at least {hours} before you arrive, so it can be registered.",
     parkingHours: "48 hours",
@@ -206,6 +207,7 @@ export const en = {
     rules: {
       parties: "Strictly no parties, and no noise abuse. Please read this carefully.",
       smoking: "Strictly no smoking inside.",
+      candle: "If you light a candle, extinguish it when it is unattended.",
       neighbours: "We love our guests, and we love our neighbours and our properties too.",
       loss: "A lost key or parking pass is charged at {amount}.",
     },

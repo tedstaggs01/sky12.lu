@@ -193,6 +193,7 @@ export const fr: Messages = {
     savePdf: "Enregistrer en PDF",
     savePdfHint: "Pour quand vous n'avez pas de wifi.",
     guidesSoon: "L'itinéraire sera ici.",
+    offline: "Téléchargez les guides en PDF à l'avance si vous n'aurez pas de connexion internet au Luxembourg.",
     parking:
       "Nous ne fournissons pas de place de parking. Garez-vous à {auchan} et utilisez la carte de parking pour sortir. Envoyez votre plaque à {email} au moins {hours} avant l'arrivée, pour qu'elle puisse être enregistrée.",
     parkingHours: "48 heures",
@@ -208,6 +209,7 @@ export const fr: Messages = {
     rules: {
       parties: "Strictement aucune fête, et aucune nuisance sonore. Lisez ceci attentivement.",
       smoking: "Il est strictement interdit de fumer à l'intérieur.",
+      candle: "Si vous allumez une bougie, éteignez-la dès qu'elle n'est plus surveillée.",
       neighbours: "Nous aimons nos voyageurs, et nous aimons aussi nos voisins et nos logements.",
       loss: "Une clé ou une carte de parking perdue est facturée {amount}.",
     },
