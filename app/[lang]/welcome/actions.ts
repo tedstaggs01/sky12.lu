@@ -1,15 +1,13 @@
 "use server";
 
 import { cookies } from "next/headers";
-import { welcomeCookie } from "@/lib/welcome-gate";
-
-const code = "7378";
+import { isWelcomeCode, welcomeCookie } from "@/lib/welcome-gate";
 
 export async function unlockWelcome(attempt: string) {
-  if (attempt !== code) return false;
+  if (!isWelcomeCode(attempt)) return false;
 
   const jar = await cookies();
-  jar.set(welcomeCookie, "stay", {
+  jar.set(welcomeCookie, attempt, {
     httpOnly: true,
     sameSite: "lax",
     path: "/",

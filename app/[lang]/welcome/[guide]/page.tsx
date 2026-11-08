@@ -9,6 +9,7 @@ import { guideSlugs, isGuide } from "@/lib/guides";
 import { hasLocale, type Locale } from "@/lib/locale";
 import { getMessages } from "@/lib/messages";
 import { stay } from "@/lib/stay-details";
+import { welcomeCode } from "@/lib/welcome-gate";
 
 export function generateStaticParams() {
   return guideSlugs.map((guide) => ({ guide }));
@@ -38,6 +39,8 @@ export default async function GuidePage({
   const { lang, guide } = await params;
   if (!hasLocale(lang) || !isGuide(guide)) notFound();
   const t = getMessages(lang);
+  const keyCode = await welcomeCode();
+  if (!keyCode) notFound();
 
   return (
     <main className="mx-auto w-full max-w-xl flex-1 px-6 py-10">
@@ -49,13 +52,13 @@ export default async function GuidePage({
       </Link>
       <h1 className="mt-6 text-3xl font-semibold tracking-tight">{t.welcome.guides[guide]}</h1>
       {guide === "apartment" ? (
-        <Arrival lang={lang} />
+        <Arrival lang={lang} keyCode={keyCode} />
       ) : guide === "wellness" ? (
         <Pool lang={lang} />
       ) : guide === "auchan" ? (
         <Auchan lang={lang} />
       ) : guide === "checkout" ? (
-        <Checkout lang={lang} />
+        <Checkout lang={lang} keyCode={keyCode} />
       ) : (
         <p className="mt-4 text-[16px] leading-7 text-muted">{t.welcome.guidesSoon}</p>
       )}
@@ -75,7 +78,7 @@ function Code({ children }: { children: ReactNode }) {
   );
 }
 
-function Arrival({ lang }: { lang: Locale }) {
+function Arrival({ lang, keyCode }: { lang: Locale; keyCode: string }) {
   const t = getMessages(lang);
   const arrival = t.welcome.arrival;
   const { phone, email } = stay.host;
@@ -138,7 +141,7 @@ function Arrival({ lang }: { lang: Locale }) {
     {
       body: (
         <>
-          {fill(arrival.box, { code: <Code>7378</Code> })}{" "}
+          {fill(arrival.box, { code: <Code>{keyCode}</Code> })}{" "}
           {fill(arrival.uses, {
             key: <Mark>{arrival.key}</Mark>,
             badge: <Mark>{arrival.badge}</Mark>,
@@ -153,7 +156,7 @@ function Arrival({ lang }: { lang: Locale }) {
       ],
     },
     {
-      body: fill(arrival.checkout, { code: <Code>7378</Code> }),
+      body: fill(arrival.checkout, { code: <Code>{keyCode}</Code> }),
     },
   ];
 
@@ -252,14 +255,14 @@ function Auchan({ lang }: { lang: Locale }) {
   );
 }
 
-function Checkout({ lang }: { lang: Locale }) {
+function Checkout({ lang, keyCode }: { lang: Locale; keyCode: string }) {
   const t = getMessages(lang);
   const checkout = t.welcome.checkoutGuide;
   const steps: GuideStep[] = [
     { body: checkout.found },
     { body: fill(checkout.time, { time: <Code>11:00</Code> }) },
     {
-      body: fill(checkout.box, { code: <Code>7378</Code> }),
+      body: fill(checkout.box, { code: <Code>{keyCode}</Code> }),
       photos: [shot("/photos/key-inside.jpg", 768, 1024, checkout.boxAlt, checkout.boxCap)],
     },
     { body: fill(checkout.fee, { amount: <Mark>75 EUR</Mark> }) },
