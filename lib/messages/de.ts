@@ -333,13 +333,12 @@ export const de: Messages = {
     hostBio:
       "{name} ist Linienpilot und entwickelt Software bei {pilotflows}. Seine Leidenschaft für die Luftfahrt teilt er auf {flight}.",
     contact:
-      "Wenn Sie während Ihres Aufenthalts Fragen, Wünsche oder dringende Anliegen haben, erreichen Sie mich unter {phone} oder {email}. Wenn ich nicht in der Luft bin, sollte ich antworten können. Alternativ: {alt}.",
+      "Wenn Sie während Ihres Aufenthalts Fragen, Wünsche oder dringende Anliegen haben, erreichen Sie mich unter {phone} oder {email}. Wenn ich nicht in der Luft bin, sollte ich antworten können.",
     emergencies: "Notfall",
     emergenciesIntro: "Diese Nummern gelten überall in Luxemburg.",
     ambulance: "Rettung, Feuerwehr und Polizei",
     police: "Polizei",
     yourHost: "Ihr Gastgeber, {name}",
-    alternative: "Alternativ",
     address: "Adresse",
     addressLines: [
       "T1-12-05",

@@ -59,7 +59,7 @@ export default async function WelcomePage({
 
 async function WelcomeDetails({ lang }: { lang: "en" | "de" | "fr" }) {
   const t = getMessages(lang);
-  const { phone, email, alternatePhone, name } = stay.host;
+  const { phone, email, name } = stay.host;
   const shopping = () => <ShoppingLink>{t.shoppingCentre}</ShoppingLink>;
 
   return (
@@ -188,11 +188,6 @@ async function WelcomeDetails({ lang }: { lang: "en" | "de" | "fr" }) {
                     {email}
                   </a>
                 ),
-                alt: (
-                  <a href={telHref(alternatePhone)} className="font-medium underline">
-                    {alternatePhone}
-                  </a>
-                ),
               })}
             </p>
           </HostCard>
@@ -218,12 +213,6 @@ async function WelcomeDetails({ lang }: { lang: "en" | "de" | "fr" }) {
               <span>{fill(t.welcome.yourHost, { name })}</span>
               <a href={telHref(phone)} className="text-lg font-medium">
                 {phone}
-              </a>
-            </li>
-            <li className="flex items-baseline justify-between gap-4">
-              <span>{t.welcome.alternative}</span>
-              <a href={telHref(alternatePhone)} className="text-lg font-medium">
-                {alternatePhone}
               </a>
             </li>
           </ul>

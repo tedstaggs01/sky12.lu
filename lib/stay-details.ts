@@ -7,7 +7,6 @@ export const stay = {
     name: "Ted",
     phone: "+352 621 232 202",
     email: "ted@staggs.lu",
-    alternatePhone: "+352 621 305 837",
   },
   unit: "T1-12-05",
   nightlyPrice: 227,

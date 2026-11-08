@@ -331,13 +331,12 @@ export const en = {
     hostBio:
       "{name} is an airline pilot and a software developer at {pilotflows}. He also shares his passion for aviation at {flight}.",
     contact:
-      "If during your stay you have any questions, any desires, or urgent matters, please contact me at {phone} or {email}. If I am not in the air, I should be able to respond. Alternatively: {alt}.",
+      "If during your stay you have any questions, any desires, or urgent matters, please contact me at {phone} or {email}. If I am not in the air, I should be able to respond.",
     emergencies: "Emergencies",
     emergenciesIntro: "These numbers work anywhere in Luxembourg.",
     ambulance: "Ambulance, fire, and police",
     police: "Police",
     yourHost: "Your host, {name}",
-    alternative: "Alternative",
     address: "Address",
     addressLines: [
       "T1-12-05",
