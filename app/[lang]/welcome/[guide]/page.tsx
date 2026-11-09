@@ -81,7 +81,7 @@ function Code({ children }: { children: ReactNode }) {
 function Arrival({ lang, keyCode }: { lang: Locale; keyCode: string }) {
   const t = getMessages(lang);
   const arrival = t.welcome.arrival;
-  const { phone, email } = stay.host;
+  const { phone } = stay.host;
   const entree = <Mark>{arrival.entree}</Mark>;
   const steps: GuideStep[] = [
     {
@@ -178,11 +178,6 @@ function Arrival({ lang, keyCode }: { lang: Locale; keyCode: string }) {
           phone: (
             <a href={`tel:${phone.replace(/\s/g, "")}`} className="font-medium underline">
               {phone}
-            </a>
-          ),
-          email: (
-            <a href={`mailto:${email}`} className="font-medium underline">
-              {email}
             </a>
           ),
         })}

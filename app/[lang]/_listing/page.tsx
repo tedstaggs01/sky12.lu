@@ -92,19 +92,6 @@ function StayLink({
   );
 }
 
-function External({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="font-medium text-foreground underline"
-    >
-      {children}
-    </a>
-  );
-}
-
 async function load(params: Promise<{ lang: string }>) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
@@ -131,7 +118,7 @@ export default async function Home({
     alt: t.photoAlts[index],
   }));
   const shopping = () => <ShoppingLink>{t.shoppingCentre}</ShoppingLink>;
-  const mail = `mailto:${stay.host.email}?subject=${encodeURIComponent(t.mailSubject)}`;
+  const phoneHref = `tel:${stay.host.phone.replace(/\s/g, "")}`;
 
   return (
     <div className="flex flex-1 flex-col bg-white text-foreground">
@@ -185,7 +172,6 @@ export default async function Home({
               </div>
               <div>
                 <p className="font-medium">{t.hostedBy}</p>
-                <p className="text-sm text-muted">{t.pilot}</p>
               </div>
             </div>
 
@@ -235,16 +221,11 @@ export default async function Home({
               <div className="max-w-xl">
                 <HostCard
                   name={stay.host.name}
-                  role={t.pilot}
+                  role=""
                   turn={t.turnCard}
                   turnBack={t.turnBack}
                 >
-                  <p className="text-[15px] leading-6 text-muted">
-                    {fill(t.hostBio, {
-                      pilotflows: <External href="https://pilotflows.com">Pilotflows</External>,
-                      flight: <External href="https://flight.lu">flight.lu</External>,
-                    })}
-                  </p>
+                  <p className="text-[15px] leading-6 text-muted">{t.hostBio}</p>
                 </HostCard>
               </div>
             </div>
@@ -258,9 +239,8 @@ export default async function Home({
               locale={lang}
               price={stay.nightlyPrice}
               currency={stay.currency}
-              email={stay.host.email}
+              phone={stay.host.phone}
               enquireLabel={t.enquireTed}
-              mailSubject={t.mailSubject}
               labels={t.calendar}
               apiUrl={process.env.NEXT_PUBLIC_API_URL ?? "http://127.0.0.1:3001"}
             />
@@ -304,9 +284,9 @@ export default async function Home({
                 <h3 className="font-medium">{t.direct.lineTitle}</h3>
                 <p className="mt-2 text-[15px] leading-6 text-muted">
                   {fill(t.direct.line, {
-                    email: (
-                      <a href={`mailto:${stay.host.email}`} className="font-medium text-foreground underline">
-                        {stay.host.email}
+                    phone: (
+                      <a href={phoneHref} className="font-medium text-foreground underline">
+                        {stay.host.phone}
                       </a>
                     ),
                   })}
@@ -318,7 +298,7 @@ export default async function Home({
               </li>
             </ul>
             <a
-              href={mail}
+              href={phoneHref}
               className="mt-10 inline-flex h-12 items-center rounded-lg bg-neutral-950 px-5 text-sm font-medium text-white"
             >
               {t.enquireTed}

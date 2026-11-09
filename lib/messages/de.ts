@@ -98,8 +98,7 @@ export const de: Messages = {
   aboutHost: "Über den Gastgeber",
   turnCard: "Karte umdrehen",
   turnBack: "Zurückdrehen",
-  hostBio:
-    "Ted ist Linienpilot und entwickelt Software bei {pilotflows}. Seine Leidenschaft für die Luftfahrt teilt er auf {flight}. Sky12 ist seine Wohnung in der zwölften Etage.",
+  hostBio: "Sky12 ist Teds Wohnung in der zwölften Etage.",
   floorLine: "{unit} · 12. Etage · Cloche d'Or",
   enquireTed: "Ted anfragen",
   mailSubject: "Sky12 Anfrage",
@@ -130,7 +129,7 @@ export const de: Messages = {
     feesTitle: "Keine Plattformgebühren",
     fees: "Sie zahlen den Übernachtungspreis, die Reinigung und die Steuer. Keine Airbnb-Servicegebühr obendrauf.",
     lineTitle: "Direkt zu Ted",
-    line: "Fragen gehen direkt an Ted unter {email}. Keine Plattform dazwischen.",
+    line: "Fragen gehen direkt an Ted unter {phone}. Keine Plattform dazwischen.",
     sameTitle: "Dieselbe Wohnung",
     same: "Derselbe Aufenthalt in der zwölften Etage, derselbe Gastgeber, dasselbe Schwimmbad, dieselbe Sauna und dasselbe Fitness. Sky12 steht auch auf Airbnb und Booking.com.",
   },
@@ -195,7 +194,7 @@ export const de: Messages = {
     guidesSoon: "Die Wegbeschreibung folgt hier.",
     offline: "Laden Sie die Wegbeschreibungen im Voraus als PDF herunter, falls Sie in Luxemburg keine Internetverbindung haben.",
     parking:
-      "Einen Parkplatz stellen wir nicht. Parken Sie bei {auchan} und nutzen Sie die Parkkarte für die Ausfahrt. Schicken Sie Ihr Kennzeichen mindestens {hours} vor der Anreise an {email}, damit wir es anmelden können.",
+      "Einen Parkplatz stellen wir nicht. Parken Sie bei {auchan} und nutzen Sie die Parkkarte für die Ausfahrt. Schicken Sie Ihr Kennzeichen mindestens {hours} vor der Anreise an {phone}, damit wir es anmelden können.",
     parkingHours: "48 Stunden",
     arrivalFacts: {
       guestsLabel: "Gäste",
@@ -204,7 +203,7 @@ export const de: Messages = {
       checkInTime: "15:00",
       checkOut: "Abreise",
       checkOutTime: "11:00",
-      id: "Jeder Gast schickt eine Ausweiskopie an {email}.",
+      id: "Jeder Gast schickt eine Ausweiskopie an Ted unter {phone}.",
     },
     rules: {
       parties: "Strikt keine Partys und keine Lärmbelästigung. Bitte lesen Sie das aufmerksam.",
@@ -247,7 +246,7 @@ export const de: Messages = {
       badge: "Badge",
       card: "Karte",
       checkout: "Beim Auschecken legen Sie Schlüssel, Karte und Badge zurück in die Box, hängen die Box wieder an die Tür und lassen den Code auf {code}, so wie Sie ihn vorgefunden haben.",
-      thanks: "Danke. Ich hoffe, das hilft. Bei einer Frage erreichen Sie mich unter {phone} oder {email}.",
+      thanks: "Danke. Ich hoffe, das hilft. Bei einer Frage erreichen Sie mich unter {phone}.",
       entree: "Entrée",
       towerCap: "Tower 21",
       towerAlt: "Eingang von Tower 21, mit der Nummer 21 an der Glasscheibe",
@@ -330,10 +329,8 @@ export const de: Messages = {
       copied: "Kopiert",
     },
     host: "Ihr Gastgeber",
-    hostBio:
-      "{name} ist Linienpilot und entwickelt Software bei {pilotflows}. Seine Leidenschaft für die Luftfahrt teilt er auf {flight}.",
     contact:
-      "Wenn Sie während Ihres Aufenthalts Fragen, Wünsche oder dringende Anliegen haben, erreichen Sie mich unter {phone} oder {email}. Wenn ich nicht in der Luft bin, sollte ich antworten können.",
+      "Wenn Sie während Ihres Aufenthalts Fragen, Wünsche oder dringende Anliegen haben, erreichen Sie mich unter {phone}. Wenn ich nicht in der Luft bin, sollte ich antworten können.",
     emergencies: "Notfall",
     emergenciesIntro: "Diese Nummern gelten überall in Luxemburg.",
     ambulance: "Rettung, Feuerwehr und Polizei",

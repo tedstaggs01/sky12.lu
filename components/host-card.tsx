@@ -77,7 +77,7 @@ export function HostCard({
             />
           </span>
           <span className="mt-3 text-lg font-semibold tracking-tight">{name}</span>
-          <span className="mt-0.5 text-sm text-muted">{role}</span>
+          {role ? <span className="mt-0.5 text-sm text-muted">{role}</span> : null}
           <span className="mt-4 inline-flex items-center gap-2 text-sm text-muted">
             <TurnIcon />
             {turn}

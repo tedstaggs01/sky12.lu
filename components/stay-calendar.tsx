@@ -59,18 +59,16 @@ export function StayCalendar({
   locale,
   price,
   currency,
-  email,
+  phone,
   enquireLabel,
-  mailSubject,
   labels,
   apiUrl,
 }: {
   locale: string;
   price: number;
   currency: string;
-  email: string;
+  phone: string;
   enquireLabel: string;
-  mailSubject: string;
   labels: Labels;
   apiUrl: string;
 }) {
@@ -176,17 +174,7 @@ export function StayCalendar({
     window.location.href = enquireHref;
   }
 
-  const subject =
-    checkIn && checkOut
-      ? `${mailSubject} — ${dayFormat.format(checkIn)} – ${dayFormat.format(checkOut)}`
-      : mailSubject;
-  const body =
-    checkIn && checkOut
-      ? `${labels.checkIn}: ${fullFormat.format(checkIn)}\n${labels.checkOut}: ${fullFormat.format(checkOut)}\n${nightsLine}\n${labels.total}: ${money.format(total)}`
-      : "";
-  const enquireHref = `mailto:${email}?subject=${encodeURIComponent(subject)}${
-    body ? `&body=${encodeURIComponent(body)}` : ""
-  }`;
+  const enquireHref = `tel:${phone.replace(/\s/g, "")}`;
 
   return (
     <div>

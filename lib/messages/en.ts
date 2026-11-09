@@ -96,8 +96,7 @@ export const en = {
   aboutHost: "About your host",
   turnCard: "Turn the card",
   turnBack: "Turn back",
-  hostBio:
-    "Ted is an airline pilot and a software developer at {pilotflows}. He also shares his passion for aviation at {flight}. Sky12 is his apartment on the twelfth floor.",
+  hostBio: "Sky12 is Ted's apartment on the twelfth floor.",
   floorLine: "{unit} · 12th floor · Cloche d'Or",
   enquireTed: "Enquire with Ted",
   mailSubject: "Sky12 enquiry",
@@ -128,7 +127,7 @@ export const en = {
     feesTitle: "No platform fees",
     fees: "Pay the nightly rate, cleaning, and tax. No Airbnb service fee on top.",
     lineTitle: "Direct line to Ted",
-    line: "Questions go straight to Ted at {email}. No platform in between.",
+    line: "Questions go straight to Ted at {phone}. No platform in between.",
     sameTitle: "The same apartment",
     same: "Same twelfth-floor stay, same host, same pool, sauna, and fitness. Sky12 is also listed on Airbnb and Booking.com.",
   },
@@ -193,7 +192,7 @@ export const en = {
     guidesSoon: "The directions will be here.",
     offline: "Download the guides as PDF in advance if you will not have an internet connection in Luxembourg.",
     parking:
-      "We do not provide a parking space. Park at {auchan}, and use the parking card to exit. Send your number plate to {email} at least {hours} before you arrive, so it can be registered.",
+      "We do not provide a parking space. Park at {auchan}, and use the parking card to exit. Send your number plate to {phone} at least {hours} before you arrive, so it can be registered.",
     parkingHours: "48 hours",
     arrivalFacts: {
       guestsLabel: "Guests",
@@ -202,7 +201,7 @@ export const en = {
       checkInTime: "15:00",
       checkOut: "Check-out",
       checkOutTime: "11:00",
-      id: "Each guest sends a copy of their ID to {email}.",
+      id: "Each guest sends a copy of their ID to Ted at {phone}.",
     },
     rules: {
       parties: "Strictly no parties, and no noise abuse. Please read this carefully.",
@@ -245,7 +244,7 @@ export const en = {
       badge: "badge",
       card: "card",
       checkout: "When you check out, put the key, card, and badge back in the box, hang the box on the door, and leave the code at {code}, as you found it.",
-      thanks: "Thank you. I hope this helps. If you have a question, contact me at {phone} or {email}.",
+      thanks: "Thank you. I hope this helps. If you have a question, contact me at {phone}.",
       entree: "Entrée",
       towerCap: "Tower 21",
       towerAlt: "Tower 21 entrance, with the number 21 on the glass",
@@ -328,10 +327,8 @@ export const en = {
       copied: "Copied",
     },
     host: "Your host",
-    hostBio:
-      "{name} is an airline pilot and a software developer at {pilotflows}. He also shares his passion for aviation at {flight}.",
     contact:
-      "If during your stay you have any questions, any desires, or urgent matters, please contact me at {phone} or {email}. If I am not in the air, I should be able to respond.",
+      "If during your stay you have any questions, any desires, or urgent matters, please contact me at {phone}. If I am not in the air, I should be able to respond.",
     emergencies: "Emergencies",
     emergenciesIntro: "These numbers work anywhere in Luxembourg.",
     ambulance: "Ambulance, fire, and police",

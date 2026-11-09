@@ -16,19 +16,6 @@ function telHref(phone: string) {
   return `tel:${phone.replace(/\s/g, "")}`;
 }
 
-function External({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="font-medium text-foreground underline"
-    >
-      {children}
-    </a>
-  );
-}
-
 async function load(params: Promise<{ lang: string }>) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
@@ -59,7 +46,7 @@ export default async function WelcomePage({
 
 async function WelcomeDetails({ lang }: { lang: "en" | "de" | "fr" }) {
   const t = getMessages(lang);
-  const { phone, email, name } = stay.host;
+  const { phone, name } = stay.host;
   const shopping = () => <ShoppingLink>{t.shoppingCentre}</ShoppingLink>;
 
   return (
@@ -99,9 +86,9 @@ async function WelcomeDetails({ lang }: { lang: "en" | "de" | "fr" }) {
           </dl>
           <p className="mt-4 text-[15px] leading-6">
             {fill(t.welcome.arrivalFacts.id, {
-              email: (
-                <a href={`mailto:${email}`} className="font-medium underline">
-                  {email}
+              phone: (
+                <a href={telHref(phone)} className="font-medium underline">
+                  {phone}
                 </a>
               ),
             })}
@@ -126,9 +113,9 @@ async function WelcomeDetails({ lang }: { lang: "en" | "de" | "fr" }) {
                 Auchan
               </span>
             ),
-            email: (
-              <a href={`mailto:${email}`} className="font-medium underline">
-                {email}
+            phone: (
+              <a href={telHref(phone)} className="font-medium underline">
+                {phone}
               </a>
             ),
             hours: <span className="font-semibold">{t.welcome.parkingHours}</span>,
@@ -168,24 +155,12 @@ async function WelcomeDetails({ lang }: { lang: "en" | "de" | "fr" }) {
 
         <section className="mt-12">
           <h2 className="text-xl font-semibold tracking-tight">{t.welcome.host}</h2>
-          <HostCard name={name} role={t.pilot} turn={t.turnCard} turnBack={t.turnBack}>
-            <p className="text-[15px] leading-6 text-muted">
-              {fill(t.welcome.hostBio, {
-                name,
-                pilotflows: <External href="https://pilotflows.com">Pilotflows</External>,
-                flight: <External href="https://flight.lu">flight.lu</External>,
-              })}
-            </p>
-            <p className="mt-4 text-[15px] leading-6">
+          <HostCard name={name} role="" turn={t.turnCard} turnBack={t.turnBack}>
+            <p className="text-[15px] leading-6">
               {fill(t.welcome.contact, {
                 phone: (
                   <a href={telHref(phone)} className="font-medium underline">
                     {phone}
-                  </a>
-                ),
-                email: (
-                  <a href={`mailto:${email}`} className="font-medium underline">
-                    {email}
                   </a>
                 ),
               })}
